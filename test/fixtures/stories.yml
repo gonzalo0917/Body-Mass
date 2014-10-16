@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mass: 9.99
+  height: 9.99
+  result: 9.99
+
+two:
+  mass: 9.99
+  height: 9.99
+  result: 9.99
