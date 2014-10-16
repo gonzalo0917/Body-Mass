@@ -29,8 +29,8 @@ class UsersController < ApplicationController
       if @user.save
         session[:user] = @user
          
-        format.html { redirect_to @user, notice: 'User was successfully created.', :controller => 'mass', :action => "index" }
-        #format.json { render action: 'index', status: :created, location: @user }
+        format.html { redirect_to notice: 'User was successfully created.',controller:'mass' }
+        format.json { render action: 'index', status: :created, location: @user }
       else
         format.html { render action: 'new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
