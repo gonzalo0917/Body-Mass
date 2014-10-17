@@ -20,8 +20,12 @@ class MassController < ApplicationController
     end
   end
 
+  def show
+    @stories = Story.where(user_id: session[:user][:id])
+  end
+  
   def story_params
     params[:story][:result] = params[:story][:mass].to_f / params[:story][:height].to_f**2
-    params.require(:story).permit(:mass, :height, :result)
+    params.require(:story).permit(:mass, :height, :result, :user_id)
   end
 end

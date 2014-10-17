@@ -1,0 +1,10 @@
+<h1>Hello:<%= session[:user][:username] %> </h1>
+<ul>
+<% @stories.each do |story|  %>
+<li>
+  Mass:<%= story.mass  %> and height: <%= story.user_id %> imc:
+  <%= story.result %>
+  </li>
+<% end %>
+</ul>
+<%= link_to "Back", controller: "mass", action: "index" %>
