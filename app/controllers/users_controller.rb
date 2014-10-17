@@ -11,7 +11,11 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
   end
-
+  
+  def logout
+    session[:user] = nil
+    redirect_to :controller => 'user', :action => 'create' 
+  end
   # GET /users/new
   def new
     @user = User.new

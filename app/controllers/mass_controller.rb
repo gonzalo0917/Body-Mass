@@ -28,4 +28,10 @@ class MassController < ApplicationController
     params[:story][:result] = params[:story][:mass].to_f / params[:story][:height].to_f**2
     params.require(:story).permit(:mass, :height, :result, :user_id)
   end
+
+  def logout
+
+    session[:user] =  nil
+    redirect_to "/"
+  end
 end

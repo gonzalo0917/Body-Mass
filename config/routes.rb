@@ -2,6 +2,7 @@ BodyMass::Application.routes.draw do
   get "mass/index"
   post "mass/create"
   get "mass/show"
+  get "mass/logout"
   resources :users
   resources :stories
 
