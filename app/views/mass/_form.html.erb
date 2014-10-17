@@ -1,16 +1,16 @@
-<%= form_for(@body_index) do |f| %>
+<%= form_for(@body_index, url:{action:"create"}) do |f| %>
 
- <div class="field">
-    <%= f.label :mass %><br>
-    <%= f.text_field :mass %>
+<div class="field">
+    <%= f.label :mass, "Mass(Kg)" %><br>
+    <%= f.text_field :mass, :value => (@result.mass if @result) %>
   </div>
   <div class="field">
-    <%= f.label :height %><br>
-    <%= f.text_field :height %>
+    <%= f.label :height, "Height(m)" %><br>
+    <%= f.text_field :height, :value => (@result.height if @result) %>
   </div>
   <div class="field">
     <%= f.label :result %><br>
-    <%= f.text_field :result %>
+    <%= f.text_field :result, :value => (@result.result if @result) %>
   </div>
   <div class="actions">
     <%= f.submit %>

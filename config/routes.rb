@@ -1,5 +1,6 @@
 BodyMass::Application.routes.draw do
   get "mass/index"
+  post "mass/create"
   resources :users
   resources :stories
 
