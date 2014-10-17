@@ -28,9 +28,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user] = @user
-         
         format.html {redirect_to :controller => 'mass', :action => 'index' }
-        format.json { render action: 'index', status: :created, location: @user }
+        #format.json { render action: 'index', status: :created, location: @user }
       else
         format.html { render action: 'new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -70,6 +69,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :password, :string)
+      params.require(:user).permit(:username, :password)
     end
 end

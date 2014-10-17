@@ -1,10 +1,10 @@
 class MassController < ApplicationController
   def index
     @body_index = Story.new
-    if session[:result_id]
-      @result = Story.find(session[:result_id])
-    else
+    if session[:result_id] == nil
       @result = nil
+    else
+      @result = Story.find(session[:result_id])
     end
   end
 

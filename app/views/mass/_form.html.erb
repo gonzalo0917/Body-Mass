@@ -12,6 +12,7 @@
     <%= f.label :result, "(IMC)" %><br>
     <%= f.text_field :result, :value => (@result.result if @result) %>
   </div>
+  <%= f.hidden_field :user_id, :value => session[:user][:id] %>
   <div class="actions">
     <%= f.submit %>
   </div>
