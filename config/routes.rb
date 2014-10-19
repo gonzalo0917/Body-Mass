@@ -1,12 +1,16 @@
 BodyMass::Application.routes.draw do
-  get "mass/index"
-  post "mass/create"
-  get "mass/show"
-  get "mass/logout"
-  get "mass/login"
+  
   resources :users
   resources :stories
 
+  controller :mass do
+    get 'index' => :index
+    get 'login' => :login
+    post 'login' => :login_create
+    post 'create' => :create
+    get 'show' => :show
+    get 'logout' => :logout
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

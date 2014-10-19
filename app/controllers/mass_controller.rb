@@ -45,7 +45,7 @@ class MassController < ApplicationController
       session[:user] = user
       redirect_to :controller => "mass", :action => "index"
     else
-    
+     redirect_to login_url, alert: "Invalid User/Password." 
     end
   end
 end
