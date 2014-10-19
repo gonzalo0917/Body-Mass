@@ -1,7 +1,7 @@
 <header>
   <% if session[:user] == nil %>
-    <h2>Welcome  <a>Login</a></h2>
+    <h2>Welcome  <%= link_to 'Login', controller: "mass", action: "login" %></li> </h2>
   <% else %>
-    <h2>Welcome: <%= session[:user][:username] %>  <a>Logout</a></h2>
+    <h2>Welcome: <%= session[:user][:username] %>  <%= link_to 'Logout', controller: "mass", action: "logout" %></li> </h2>
   <% end %>
 </header>
