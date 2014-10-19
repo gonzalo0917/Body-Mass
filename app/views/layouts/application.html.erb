@@ -8,7 +8,11 @@
 </head>
 <body class="<%= controller.controller_name  %>">
 
-<%= yield %>
+  <%= render(partial: "shared/header")%>
+  <div class="main">
+    <%= yield %>
+  </div>
+  <%= render(partial: "shared/footer")  %>
 
 </body>
 </html>
