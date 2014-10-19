@@ -1,11 +1,12 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+header {overflow:hidden;width:100%;padding:24px;}
 /* footer */
 footer {padding-top:31px;text-align:center;line-height:18px;color:#fff}
 footer a {color:#439deb}
 footer > section.left {
-    padding-right: 350px;
+    padding-right: 4px;
 }
 footer {
  .left{float:left; }

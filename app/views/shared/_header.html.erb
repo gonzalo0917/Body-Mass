@@ -1,1 +1,7 @@
-Header
+<header>
+  <% if session[:user] == nil %>
+    <h2>Welcome  <a>Login</a></h2>
+  <% else %>
+    <h2>Welcome: <%= session[:user][:username] %>  <a>Logout</a></h2>
+  <% end %>
+</header>

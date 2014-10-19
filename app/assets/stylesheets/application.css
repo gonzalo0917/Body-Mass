@@ -19,8 +19,9 @@ img {vertical-align:top}
 embed {vertical-align:top}
 * {border:none}
 *
-.main {margin:0 auto;width:960px;position:relative}
+.main {margin:0 auto;width:960px;position:relative; height:auto;}
 .footer {background:url(bg_footer.jpg) top center repeat;height:100px}
+body {background:url(bg.jpg) top center repeat !important;border:0;font:13px Arial, Helvetica, sans-serif;color:#323232;line-height:17px}
 select,
 textarea,
 input[type="text"],
@@ -113,3 +114,4 @@ input[type="color"]:focus,
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
+
